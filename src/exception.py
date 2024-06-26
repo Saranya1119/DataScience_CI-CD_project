@@ -27,7 +27,7 @@ class CustomException(Exception):
 #     try:
 #         a = 1/0
 #     except Exception as e:
-#         logging.INFO("divide by zero error")
+#         logging.info("divide by zero error")
 #         raise CustomException(e,sys)
     
     

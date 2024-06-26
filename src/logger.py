@@ -23,4 +23,4 @@ logging.basicConfig(
 # this creates a new logs folder and log files in the specified format.
 
 # if __name__ == "__main__":
-#     logging.INFO("logging has started")
+#     logging.info("logging has started")
