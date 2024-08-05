@@ -15,6 +15,9 @@ from dataclasses import dataclass
 from src.components.data_transformation import DataTransformation
 from src.components.data_transformation import DataTransformationConfig
 
+from src.components.model_trainer import ModelTrainerConfig
+from src.components.model_trainer import ModelTrainer
+
 # know bout dataclasses.
 # we need some inputs(ex: path to save modals,train data, test data...so on). for this we define a class called data ingestionconfig
 # dataclass is a decorator. using which we can directly define a class variable.
@@ -60,6 +63,9 @@ class DataIngestion:
 if __name__=="__main__":
     obj=DataIngestion()
     train_data,test_data=obj.initiate_data_ingestion()
-    
+
     data_transformation=DataTransformation()
     train_arr,test_arr,_=data_transformation.initiate_data_transformation(train_data,test_data)
+
+    modeltrainer=ModelTrainer()
+    print(modeltrainer.initiate_model_trainer(train_arr,test_arr))
